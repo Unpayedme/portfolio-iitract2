@@ -24,7 +24,7 @@ export default function Blog() {
 
       <div className="flex flex-col gap-4">
         {BLOG_POSTS.map(category => (
-          <Link key={category.id} href={`blog/category/${category.slug}`}>
+          <Link key={category.id} href={`blog/${category.slug}`}>
             <div className="border rounded-lg hover:muted/50 p-4 gap-4">
               <h1 className="font-bold">{category.title}</h1>
               <p className="text-muted-foreground">{category.overview}</p>
