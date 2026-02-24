@@ -7,10 +7,10 @@ import { notFound } from "next/navigation";
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const [slug1] = slug;
-  console.log(slug1);
+  //console.log(slug1);
 
   const currentSlug = BLOG_POSTS.find((slug) => slug.slug === slug1)
-  console.log(currentSlug?.slug);
+  //console.log(currentSlug?.slug);
 
 
   if (!currentSlug || currentSlug == null) {

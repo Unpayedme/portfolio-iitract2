@@ -67,7 +67,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Minimal Design Principles",
     overview: "Introduction to Minimal Design Principles",
     content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    category: ["tech", "design"],
+    category: ["design","tech"],
     date: "February 7, 2026",
     author: "Klexa Gaviola"
   },
