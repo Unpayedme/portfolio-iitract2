@@ -18,16 +18,16 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   }
 
   return (
-    <div className="container m-auto my-10">
-      <div className="text-muted-foreground mb-2">
-        <Link href="/blog" className="inline-flex hover:underline">
-          <ArrowLeft className="w-5" /> Back to Blog
+    <div className="container m-auto my-10 p-4">
+      <div className="text-muted-foreground mb-2 text-sm md:text-lg">
+        <Link href="/blog" className="inline-flex hover:underline justify-center items-center">
+          <ArrowLeft className="w-5 justify-center items-center" />Back to Blog
         </Link>
       </div>
       <div>
         <h1 className="text-4xl font-bold">{currentSlug.title}</h1>
       </div>
-      <div className="text-muted-foreground mb-4 mt-2" >
+      <div className="text-muted-foreground mb-4 mt-2 text-xs md:text-lg" >
         {currentSlug.date} • {currentSlug.author} • {currentSlug.category.join(" - ")}
       </div>
       <div>

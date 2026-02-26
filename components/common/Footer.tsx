@@ -1,8 +1,9 @@
+"use client"
 import Link from "next/link";
 
 export function Footer(){
     return (
-        <div className="border-t border-gray-700 p-6">
+        <div className="border-t border-gray-700 p-6 text-xs sm:text-md md:text-lg lg:text-xl sticky bottom-0 bg-white z-50">
             <div className="container m-auto flex justify-around">
                 <div>
                     <ul>

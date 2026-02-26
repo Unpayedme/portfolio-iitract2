@@ -25,22 +25,22 @@ export default async function Category({ params }: { params: Promise<{ category:
     console.log(filtedCategory);
 
     return (
-        <div className="container m-auto mt-4">
+        <div className="container m-auto mt-4 p-4">
             <div className="text-muted-foreground mb-2">
                 <Link href="/blog" className="inline-flex hover:underline">
                     <ArrowLeft className="w-5" /> Back to Blog
                 </Link>
             </div>
-            <h1 className="font-bold text-4xl">Category: {filtedCategory ? filtedCategory.name : ""}</h1>
-            <p className="text-muted-foreground">{filtedPost.length !== 0 ? filtedPost.length : ""}  post in this category</p>
-            <div className="my-6 flex gap-2">
+            <h1 className="font-bold text-xl md:text-4xl">Category: {filtedCategory ? filtedCategory.name : ""}</h1>
+            <p className="text-muted-foreground text-sm md:text-md">{filtedPost.length !== 0 ? filtedPost.length : ""}  post in this category</p>
+            <div className="my-6 inline-block md:flex md:gap-2">
                 <Link href="/blog">
-                    <Button variant="outline">All Posts</Button>
+                    <Button variant="outline" className="inline-block mt-1 mr-1">All Posts</Button>
                 </Link>
 
                 {
                     BLOG_CATEGORIES.map((category,index) => (
-                        <Link key={index} href={`/blog/category/${category.slug}`}>
+                        <Link key={index} href={`/blog/category/${category.slug}`} className="inline-block mt-1 mr-1">
                             <Button variant="outline">{category.name}</Button>
                         </Link>
                     ))
